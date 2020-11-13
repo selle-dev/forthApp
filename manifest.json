@@ -4,7 +4,7 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/index.html",
-    "app_name": "TvGuide",
+    "name": "TvGuide",
     "short_name": "TvG",
     "description": "Find shows to watch",
     "icons": [
@@ -20,8 +20,8 @@
         },
 		
 		{
-			"src": "path/to/maskable_icon.png",
-			"sizes": "196x196",
+			"src": "maskable_icon-512x512.png",
+			"sizes": "512x512",
 			"type": "image/png",
 			"purpose": "maskable"
 		}
