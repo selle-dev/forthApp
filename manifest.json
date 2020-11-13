@@ -1,31 +1,30 @@
 {
-    "theme_color": "#2c2015",
-    "background_color": "#ffffff",
-    "display": "standalone",
-    "scope": "/",
-    "start_url": "/index.html",
-    "name": "TvGuide",
-    "short_name": "TvG",
-    "description": "Find shows to watch",
-    "icons": [
+  "name": "TvGuide",
+  "short_name": "TvG",
+  "theme_color": "#2c2015",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/index.html",
+  "description": "Find shows to watch",
+  "orientation": "any",
+  "icons": [
         {
-            "src": "/icon-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
+          "src": "/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
         },
         {
-            "src": "/icon-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
+          "src": "/icon-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
         },
-		
-		{
-			"src": "maskable_icon-512x512.png",
-			"sizes": "512x512",
-			"type": "image/png",
-			"purpose": "maskable"
-		}
-		
-		
+        {
+        "src": "path/to/maskable_icon.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+         }
+  
     ]
 }
