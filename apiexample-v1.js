@@ -20,7 +20,7 @@ function fetchData() {
 
 	var search = document.getElementById("search_input").value;
 
-	fetch('http://api.tvmaze.com/search/shows?q=' + search)
+	fetch('https://api.tvmaze.com/search/shows?q=' + search)
 		.then(response => response.json())
 		.then(data => updatePage(data));
 } // window.onload 
@@ -177,7 +177,7 @@ function createTVShow(tvshowJSON) {
 // fetch episodes for a given tv show id
 function fetchEpisodes(showId, elemSummaryEpisode) {
 
-	fetch('http://api.tvmaze.com/shows/' + showId + '/episodes')
+	fetch('https://api.tvmaze.com/shows/' + showId + '/episodes')
 		.then(response => response.json())
 		.then(data => showEpisodes(data, elemSummaryEpisode));
 
@@ -314,7 +314,7 @@ function str_replace(s) {
 function display_shows (){
 
        
-    fetch('http://api.tvmaze.com/shows?page=1')
+    fetch('https://api.tvmaze.com/shows?page=1')
 		.then(response => response.json())
         .then(function(data) {
           
@@ -360,7 +360,7 @@ function display_shows (){
 
 async function display_show_details(showId){
 
-	url = "http://api.tvmaze.com/shows/" + showId + "?embed=cast";
+	url = "https://api.tvmaze.com/shows/" + showId + "?embed=cast";
 
 
 	var temp = document.getElementById("main");
@@ -604,7 +604,7 @@ async function display_show_details(showId){
 
 	
 
-	let json_resp = await fetch("http://api.tvmaze.com/shows/" + show.id + "/images");	
+	let json_resp = await fetch("https://api.tvmaze.com/shows/" + show.id + "/images");	
 	let json_images = await json_resp.json();
 
 
@@ -670,7 +670,7 @@ async function createEpisodes (showId){
 	var headerswitch = true;
 	var zebraflag = true;
 
-	url = "http://api.tvmaze.com/shows/" + showId + "/episodes";	
+	url = "https://api.tvmaze.com/shows/" + showId + "/episodes";	
 	console.log("EPISODES URL " + url);	
 	let response = await fetch(url);	
 	let episodes = await response.json();
@@ -867,7 +867,7 @@ function createCast (data){
 async function createCrew (data){
 
 
-	url = "http://api.tvmaze.com/shows/" + data + "/crew";		
+	url = "https://api.tvmaze.com/shows/" + data + "/crew";		
 	let response = await fetch(url);	
 	let crew = await response.json();
 
@@ -931,7 +931,7 @@ async function createCrew (data){
 
 async function createGallery (data){
 
-	url = "http://api.tvmaze.com/shows/" + data + "/images";		
+	url = "https://api.tvmaze.com/shows/" + data + "/images";		
 	let response = await fetch(url);	
 	let gallery = await response.json();
 
@@ -1024,8 +1024,10 @@ async function create_schedule(){
 	p_counter = 0;
 
 
-	url = "http://api.tvmaze.com/schedule";		
-	url_upc = "http://api.tvmaze.com/schedule?date="+ getNextDay();
+	url = "https://api.tvmaze.com/schedule";		
+	url_upc = "https://api.tvmaze.com/schedule?date="+ getNextDay();
+
+	
 	//url = url_upc;
 
 	let response = await fetch(url);	
